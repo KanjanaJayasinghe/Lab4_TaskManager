@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/home_page_text"
-                android:textColor="@color/material_dynamic_neutral60" />
+                android:textColor="#626467" />
         </LinearLayout>
 
         <SearchView
