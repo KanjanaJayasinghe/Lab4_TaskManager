@@ -232,19 +232,23 @@
             android:id="@+id/imageView"
             android:layout_width="174dp"
             android:layout_height="174dp"
-            app:srcCompat="@drawable/update_photo"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="34dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/update_photo" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="164dp"
             android:layout_height="152dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="32dp"
             android:text="Update Your Taks Details"
             android:textSize="35dp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="214dp"
-            tools:layout_editor_absoluteY="54dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
