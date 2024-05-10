@@ -8,5 +8,8 @@
         android:endColor="@color/gradient_end"
         android:startColor="@color/gradient_start"
         android:type="linear" />
-    <corners android:radius="5dp" />
+    <corners android:radius="10dp" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/bg_button"/>
 </shape>

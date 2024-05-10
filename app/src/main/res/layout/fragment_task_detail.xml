@@ -58,7 +58,7 @@
             android:layout_marginTop="144dp"
             android:text="@string/title_text"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_title"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/linearLayoutTitle"
             app:layout_constraintTop_toBottomOf="@+id/toolbarTaskDetail" />
@@ -227,6 +227,24 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="174dp"
+            android:layout_height="174dp"
+            app:srcCompat="@drawable/update_photo"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="164dp"
+            android:layout_height="152dp"
+            android:text="Update Your Taks Details"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="54dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
