@@ -20,6 +20,7 @@ class TaskDetailViewModel @Inject constructor(var trepo: TaskRepository) : ViewM
     val taskDate = MutableLiveData<String>()
     val taskTime = MutableLiveData<String>()
 
+
     fun selectDate(fragmentManager: FragmentManager) {
         val datePicker = MaterialDatePicker.Builder.datePicker()
             .setTitleText("Select Date")
@@ -51,4 +52,11 @@ class TaskDetailViewModel @Inject constructor(var trepo: TaskRepository) : ViewM
             trepo.updateTask(taskId, taskTitle, taskDate, taskTime)
         }
     }
+
+    fun deleteTask(taskId: Int) {
+        CoroutineScope(Dispatchers.Main).launch {
+            trepo.deleteTask(taskId)
+        }
+    }
+
 }
