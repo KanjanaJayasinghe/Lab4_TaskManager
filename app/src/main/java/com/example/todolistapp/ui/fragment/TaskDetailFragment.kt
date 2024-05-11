@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.todolistapp.R
 import com.example.todolistapp.databinding.FragmentTaskDetailBinding
+import com.example.todolistapp.data.entity.Task
 import com.example.todolistapp.ui.viewmodel.TaskDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,6 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class TaskDetailFragment : Fragment() {
     private lateinit var binding: FragmentTaskDetailBinding
     private lateinit var viewModel: TaskDetailViewModel
+    private lateinit var task: Task
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +32,7 @@ class TaskDetailFragment : Fragment() {
         binding.taskDetailToolbarTitle = "Task Detail"
 
         val bundle: TaskDetailFragmentArgs by navArgs()
-        val task = bundle.task
+        task = bundle.task
 
         binding.taskObject = task
         binding.taskDate = task.taskDate
@@ -47,6 +49,7 @@ class TaskDetailFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val tempViewModel: TaskDetailViewModel by viewModels()
@@ -56,6 +59,7 @@ class TaskDetailFragment : Fragment() {
     fun onBackPressed() {
         requireActivity().onBackPressedDispatcher.onBackPressed()
     }
+
 
     fun selectDate() {
         viewModel.selectDate(requireActivity().supportFragmentManager)
@@ -67,6 +71,11 @@ class TaskDetailFragment : Fragment() {
 
     fun updateTask(taskId: Int, taskTitle: String, taskDate: String, taskTime: String) {
         viewModel.updateTask(taskId, taskTitle, taskDate, taskTime)
+        onBackPressed()
+    }
+
+    fun deleteTask(taskId: Int) {
+        viewModel.deleteTask(taskId)
         onBackPressed()
     }
 }
