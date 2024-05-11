@@ -34,4 +34,9 @@ class TaskDataSource(var taskDao: TaskDao) {
         }
         taskDao.setChecked(task)
     }
+
+    suspend fun deleteTask(taskId: Int) {
+        taskDao.deleteTask(taskId)
+    }
+
 }
