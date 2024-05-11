@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            app:cardBackgroundColor="@{cardViewBackgroundColor}"
+            android:background="@drawable/card_background"
             app:cardElevation="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
