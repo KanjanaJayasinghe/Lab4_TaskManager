@@ -178,8 +178,10 @@
             android:paddingBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutDate"
+            app:layout_constraintVertical_bias="0.92">
 
             <ImageView
                 android:id="@+id/ivTaskTime"
@@ -228,7 +230,7 @@
             android:layout_height="120dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="76dp"
-            android:text="Create Your Task"
+            android:text="Create Your New Task"
             android:textSize="34dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -236,10 +238,10 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="200dp"
-            android:layout_height="188dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="232dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/photo" />
