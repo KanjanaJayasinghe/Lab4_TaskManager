@@ -161,12 +161,14 @@
             android:id="@+id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
             android:text="@string/time_text"
             android:textColor="@color/black"
             android:textSize="@dimen/text_title"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/linearLayoutTime"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutDate" />
 
@@ -229,13 +231,12 @@
             app:layout_constraintStart_toStartOf="parent" />
 
 
-
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="174dp"
-            android:layout_height="174dp"
+            android:layout_width="160dp"
+            android:layout_height="149dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="64dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/update_photo" />

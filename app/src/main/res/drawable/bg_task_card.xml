@@ -5,5 +5,5 @@
         android:color="@color/bg_button">
     </stroke>
     <corners android:radius="10dp"></corners>
-    <gradient android:startColor="#E4E3E3" android:endColor="#E3E1E1"></gradient>
+
 </shape>
